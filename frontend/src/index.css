@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        --background: 1 0 0;
+        --foreground: 0.145 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.145 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.145 0 0;
+        --primary: 0.205 0 0;
+        --primary-foreground: 0.985 0 0;
+        --secondary: 0.97 0 0;
+        --secondary-foreground: 0.205 0 0;
+        --muted: 0.97 0 0;
+        --muted-foreground: 0.556 0 0;
+        --accent: 0.97 0 0;
+        --accent-foreground: 0.205 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.922 0 0;
+        --input: 0.922 0 0;
+        --ring: 0.708 0 0;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        --sidebar: 0.985 0 0;
+        --sidebar-foreground: 0.145 0 0;
+        --sidebar-primary: 0.205 0 0;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.97 0 0;
+        --sidebar-accent-foreground: 0.205 0 0;
+        --sidebar-border: 0.922 0 0;
+        --sidebar-ring: 0.708 0 0;
+    }
+
+    .dark {
+        /* Deep charcoal background with subtle gradient */
+        --background: 0.14 0.005 280;
+        /* Light gray text */
+        --foreground: 0.88 0.01 280;
+        /* Slightly lighter card background */
+        --card: 0.16 0.005 280;
+        --card-foreground: 0.88 0.01 280;
+        --popover: 0.16 0.005 280;
+        --popover-foreground: 0.88 0.01 280;
+        /* Refined accent - vibrant light blue matching reference */
+        --primary: 0.65 0.15 220;
+        --primary-foreground: 0.95 0.01 280;
+        /* Subtle secondary */
+        --secondary: 0.20 0.005 280;
+        --secondary-foreground: 0.88 0.01 280;
+        /* Muted tones */
+        --muted: 0.22 0.005 280;
+        --muted-foreground: 0.58 0.01 280;
+        /* Refined accent color - vibrant light blue (#5DADE2 equivalent) */
+        --accent: 0.65 0.15 220;
+        --accent-foreground: 0.95 0.01 280;
+        /* Destructive kept for form validation */
+        --destructive: 0.55 0.18 25;
+        --destructive-foreground: 0.95 0.01 280;
+        /* Subtle borders */
+        --border: 0.24 0.005 280;
+        --input: 0.24 0.005 280;
+        --ring: 0.65 0.15 220;
+        --chart-1: 0.65 0.15 220;
+        --chart-2: 0.60 0.12 200;
+        --chart-3: 0.60 0.12 280;
+        --chart-4: 0.60 0.12 320;
+        --chart-5: 0.60 0.12 160;
+        --sidebar: 0.16 0.005 280;
+        --sidebar-foreground: 0.88 0.01 280;
+        --sidebar-primary: 0.65 0.15 220;
+        --sidebar-primary-foreground: 0.95 0.01 280;
+        --sidebar-accent: 0.20 0.005 280;
+        --sidebar-accent-foreground: 0.88 0.01 280;
+        --sidebar-border: 0.24 0.005 280;
+        --sidebar-ring: 0.65 0.15 220;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "kern" 1, "liga" 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer utilities {
+    /* Refined fade-in animation with delay support */
+    .animate-fade-in {
+        animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Slide-in animations */
+    .animate-slide-in-left {
+        animation: slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .animate-slide-in-right {
+        animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Timeline slide-in animation */
+    .animate-slide-in-timeline {
+        animation: slideInTimeline 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+    }
+
+    @keyframes slideInTimeline {
+        from {
+            opacity: 0;
+            transform: translateX(-50px) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    /* Mouse scroll wheel animation with glow */
+    .animate-mouse-scroll {
+        animation: mouseScroll 2s ease-in-out infinite;
+    }
+
+    @keyframes mouseScroll {
+        0% {
+            opacity: 0.3;
+            transform: translateY(0);
+            filter: drop-shadow(0 0 2px oklch(var(--accent) / 0.3));
+        }
+        50% {
+            opacity: 1;
+            transform: translateY(6px);
+            filter: drop-shadow(0 0 8px oklch(var(--accent) / 0.8)) drop-shadow(0 0 12px oklch(var(--accent) / 0.4));
+        }
+        100% {
+            opacity: 0.3;
+            transform: translateY(0);
+            filter: drop-shadow(0 0 2px oklch(var(--accent) / 0.3));
+        }
+    }
+
+    /* Elegant Name Fade-In Animation with Upward Movement */
+    .animate-name-fade-in {
+        animation: nameFadeIn 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        opacity: 0;
+    }
+
+    @keyframes nameFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Full-Page Modal Animations */
+    .animate-modal-fade-in {
+        animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .animate-modal-scale-in {
+        animation: modalScaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes modalScaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Subtle glow effect */
+    .glow-accent {
+        box-shadow: 0 0 20px oklch(var(--accent) / 0.15);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+        background: linear-gradient(135deg, oklch(var(--foreground)), oklch(var(--accent)));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Subtle backdrop blur */
+    .backdrop-blur-subtle {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Line clamp utilities for mobile text truncation */
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: oklch(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+    background: oklch(var(--border));
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: oklch(var(--muted));
+}
+
+/* Subtle background gradient */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, oklch(var(--accent) / 0.03), transparent 50%),
+                radial-gradient(circle at 0% 100%, oklch(var(--accent) / 0.02), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content is above background gradient */
+#root {
+    position: relative;
+    z-index: 1;
+}
