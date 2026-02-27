@@ -1,0 +1,65 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update job titles from Unreal Engine Developer to Technical Designer across Projects and Resume",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the Residency project title from 'Lead Unreal Engine Developer' to 'Lead Technical Designer' in the Projects section",
+      "acceptanceCriteria": [
+        "The Residency project card and/or modal displays 'Lead Technical Designer' instead of 'Lead Unreal Engine Developer'."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Projects.tsx",
+          "operation": "modify",
+          "description": "Locate the Residency project entry in the hardcoded projects array and update the role field from 'Lead Unreal Engine Developer' to 'Lead Technical Designer'. Ensure both the grid card display and the cinematic modal show the updated title."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Update the Virtual Reality Trainings project title from 'Unreal Engine Developer' to 'Technical Designer' in the Projects section",
+      "acceptanceCriteria": [
+        "The Virtual Reality Trainings project card and/or modal displays 'Technical Designer' instead of 'Unreal Engine Developer'."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Projects.tsx",
+          "operation": "modify",
+          "description": "Locate the Virtual Reality Trainings project entry in the hardcoded projects array and update the role field from 'Unreal Engine Developer' to 'Technical Designer'. Ensure both the grid card display and the cinematic modal show the updated title."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Update the Resume experience entry from 'Lead Unreal Engine Developer' to 'Lead Technical Designer' while keeping all other details unchanged",
+      "acceptanceCriteria": [
+        "The Resume section shows 'Lead Technical Designer' where 'Lead Unreal Engine Developer' previously appeared.",
+        "All other fields for that experience entry remain unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Resume.tsx",
+          "operation": "modify",
+          "description": "Locate the experience entry with position 'Lead Unreal Engine Developer' in the hardcoded experience array and update the position field to 'Lead Technical Designer'. Keep company, period, and description fields unchanged."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Update the Resume experience entry from 'Unreal Developer' to 'Technical Designer' while keeping all other details unchanged",
+      "acceptanceCriteria": [
+        "The Resume section shows 'Technical Designer' where 'Unreal Developer' previously appeared.",
+        "All other fields for that experience entry remain unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Resume.tsx",
+          "operation": "modify",
+          "description": "Locate the experience entry with position 'Unreal Developer' in the hardcoded experience array and update the position field to 'Technical Designer'. Keep company, period, and description fields unchanged."
+        }
+      ]
+    }
+  ]
+}

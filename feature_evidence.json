@@ -1,0 +1,85 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-the-projects-section-update-the-title-for-the-residency-project-entry-from-lead-unreal-engine-developer-to-lead-technical-designer",
+      "featureTitle": "In the Projects section, update the title for the Residency project entry from 'Lead Unreal Engine Developer' to 'Lead Technical Designer'.",
+      "files": [
+        "frontend/src/components/Projects.tsx"
+      ],
+      "components": [
+        "blob-storage@2.0.3",
+        "authorization@1.0.1",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-projects-section-update-the-title-for-the-virtual-reality-trainings-project-entry-from-unreal-engine-developer-to-technical-designer",
+      "featureTitle": "In the Projects section, update the title for the Virtual Reality Trainings project entry from 'Unreal Engine Developer' to 'Technical Designer'.",
+      "files": [
+        "frontend/src/components/Projects.tsx"
+      ],
+      "components": [
+        "blob-storage@2.0.3",
+        "authorization@1.0.1",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-resume-section-update-the-experience-entry-titled-lead-unreal-engine-developer-to-lead-technical-designer-keeping-all-other-details-company-dates-description-etc-unchanged",
+      "featureTitle": "In the Resume section, update the experience entry titled 'Lead Unreal Engine Developer' to 'Lead Technical Designer', keeping all other details (company, dates, description, etc.) unchanged.",
+      "files": [
+        "frontend/src/components/Resume.tsx"
+      ],
+      "components": [
+        "blob-storage@2.0.3",
+        "authorization@1.0.1",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-resume-section-update-the-experience-entry-titled-unreal-developer-to-technical-designer-keeping-all-other-details-company-dates-description-etc-unchanged",
+      "featureTitle": "In the Resume section, update the experience entry titled 'Unreal Developer' to 'Technical Designer', keeping all other details (company, dates, description, etc.) unchanged.",
+      "files": [
+        "frontend/src/components/Resume.tsx"
+      ],
+      "components": [
+        "blob-storage@2.0.3",
+        "authorization@1.0.1",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

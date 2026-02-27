@@ -1,0 +1,31 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T14:33:47.443Z",
+  "summary": "All four requirements are implemented in the diff. Projects.tsx shows 'Lead Technical Designer' for the Residency project and 'Technical Designer' for the Virtual Reality Trainings project. Resume.tsx shows 'Lead Technical Designer (Systems, Features, UI)' for The Residency entry and 'Technical Designer (Features)' for the Realworldone entry. The additional modifications to useInternetIdentity.ts and frontend-file-summaries.txt are unrelated to the build request. The project_state.json addition is a tracking file, not a frontend feature.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Modification to frontend/src/hooks/useInternetIdentity.ts",
+      "reason": "The build request explicitly scopes all changes to frontend/src/components/Projects.tsx and frontend/src/components/Resume.tsx only. Changes to useInternetIdentity.ts were not requested.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts"
+      ]
+    },
+    {
+      "description": "Addition of project_state.json tracking file",
+      "reason": "The build request does not mention creating a project_state.json file. This is an internal tracking artifact not part of the requested changes.",
+      "evidence": [
+        "project_state.json"
+      ]
+    }
+  ],
+  "confidence": 0.88,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/Projects.tsx",
+    "frontend/src/components/Resume.tsx",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "project_state.json"
+  ]
+}

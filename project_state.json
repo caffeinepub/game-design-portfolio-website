@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Personal portfolio/resume website with project listings, VR training section, and resume experience entries. User is updating job titles throughout the site from Unreal Engine Developer variants to Technical Designer variants.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-in-the-projects-section-update-the-title-for-the-residency-project-entry-from-lead-unreal-engine-developer-to-lead-technical-designer",
+      "title": "In the Projects section, update the title for the Residency project entry from 'Lead Unreal Engine Developer' to 'Lead Technical Designer'.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-projects-section-update-the-title-for-the-virtual-reality-trainings-project-entry-from-unreal-engine-developer-to-technical-designer",
+      "title": "In the Projects section, update the title for the Virtual Reality Trainings project entry from 'Unreal Engine Developer' to 'Technical Designer'.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-resume-section-update-the-experience-entry-titled-lead-unreal-engine-developer-to-lead-technical-designer-keeping-all-other-details-company-dates-description-etc-unchanged",
+      "title": "In the Resume section, update the experience entry titled 'Lead Unreal Engine Developer' to 'Lead Technical Designer', keeping all other details (company, dates, description, etc.) unchanged.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-resume-section-update-the-experience-entry-titled-unreal-developer-to-technical-designer-keeping-all-other-details-company-dates-description-etc-unchanged",
+      "title": "In the Resume section, update the experience entry titled 'Unreal Developer' to 'Technical Designer', keeping all other details (company, dates, description, etc.) unchanged.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "gameProjectType": "none",
+  "projectName": "Update job titles from Unreal Engine Developer to Technical Designer across Projects and Resume",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

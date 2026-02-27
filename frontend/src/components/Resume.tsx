@@ -3,14 +3,14 @@ import { Separator } from '@/components/ui/separator';
 const Resume = () => {
   const experience = [
     {
-      title: 'Lead Unreal Engine Developer (Systems, Features, UI)',
+      title: 'Lead Technical Designer (Systems, Features, UI)',
       company: 'The Residency — Remote',
       period: 'October 2023 – Present',
       description:
         'Built core C++ and Blueprint multiplayer systems, gameplay features, and UI for large-scale online games supporting thousands of concurrent players. Enhanced network replication efficiency for 1,000+ users across multiple platforms. Accelerated onboarding of technical designers on Improbable\'s MSquared engine by establishing development standards and best practices.',
     },
     {
-      title: 'Unreal Developer (Features)',
+      title: 'Technical Designer (Features)',
       company: 'Realworldone — Remote',
       period: 'October 2022 – October 2023',
       description:

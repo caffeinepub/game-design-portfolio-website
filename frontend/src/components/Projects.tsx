@@ -48,7 +48,7 @@ const Projects = () => {
     {
       id: 'residency-multiplayer',
       title: 'The Residency Multiplayer Games',
-      role: 'Lead Unreal Engine Developer',
+      role: 'Lead Technical Designer',
       technologies: ['Unreal Engine', 'Blueprint', 'C++', 'Multiplayer Systems', 'System Design', 'Gameplay Development'],
       description:
         'Led technical direction and gameplay development for interactive multiplayer games connecting football stars with fans in real time, supporting 1,000+ concurrent players.',
@@ -94,7 +94,7 @@ const Projects = () => {
       id: 'vr-trainings',
       title: 'Virtual Reality Trainings',
       subtitle: 'Multiplayer VR Training Applications',
-      role: 'Unreal Engine Developer',
+      role: 'Technical Designer',
       technologies: ['Unreal Engine', 'C++', 'Blueprints', 'VR SDKs', 'Multiplayer Systems', 'Enterprise Solutions'],
       description:
         'Developed multiplayer VR training applications in Unreal Engine, delivering stable, high-performance solutions for enterprise clients including Zeiss and Cytiva.',
@@ -293,81 +293,74 @@ const Projects = () => {
                 <div className="absolute inset-0">
                   <iframe
                     src={selectedProject.embedUrl}
-                    title={selectedProject.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full scale-110"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  ></iframe>
+                    title={selectedProject.title}
+                  />
                 </div>
-                
-                {/* Text overlay - Mobile optimized positioning and sizing */}
-                <div className="relative z-20 h-full flex flex-col justify-end p-4 sm:p-6 md:p-10 lg:p-16">
-                  <div className="bg-gradient-to-t from-background/98 via-background/90 to-transparent p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg backdrop-blur-sm">
-                    <p className="text-xs sm:text-sm md:text-base lg:text-lg text-accent tracking-wide uppercase mb-1.5 sm:mb-2 md:mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-medium">
-                      {selectedProject.subtitle || selectedProject.role}
-                    </p>
-                    <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-foreground mb-2 sm:mb-2.5 md:mb-3 lg:mb-4 tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] leading-tight">
-                      {selectedProject.title}
-                    </h2>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-5xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] line-clamp-3 sm:line-clamp-none">
-                      {selectedProject.description}
-                    </p>
-                  </div>
+
+                {/* Title overlay on video - mobile optimized */}
+                <div className="absolute bottom-0 left-0 right-0 z-20 p-6 sm:p-8 md:p-12">
+                  <p className="text-xs sm:text-sm text-accent tracking-widest uppercase mb-2 sm:mb-3 font-medium">
+                    {selectedProject.role}
+                  </p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-foreground tracking-tight leading-tight">
+                    {selectedProject.title}
+                  </h2>
                 </div>
               </div>
 
-              {/* Content Section - Mobile optimized padding and spacing */}
-              <div className="p-5 sm:p-6 md:p-10 lg:p-16 space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
-                {/* Technologies */}
-                <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
-                    {selectedProject.technologies.map((tech, techIndex) => (
-                      <Badge 
-                        key={techIndex} 
-                        variant="outline" 
-                        className="text-xs sm:text-sm md:text-base lg:text-lg font-normal border-border/50 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 ease-out px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Project Overview */}
-                <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">Project Overview</h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl max-w-6xl">
+              {/* Content Section - Mobile Optimized */}
+              <div className="p-6 sm:p-8 md:p-12 space-y-8 sm:space-y-12">
+                {/* Overview */}
+                <div className="max-w-3xl">
+                  <h3 className="text-xs sm:text-sm font-medium tracking-widest uppercase text-accent mb-4 sm:mb-6">Overview</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                     {selectedProject.extendedDescription}
                   </p>
                 </div>
 
-                {/* Key Responsibilities */}
-                <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">Key Responsibilities</h4>
-                  <ul className="space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-5 max-w-6xl">
-                    {selectedProject.responsibilities.map((responsibility, respIndex) => (
-                      <li 
-                        key={respIndex} 
-                        className="flex items-start gap-2.5 sm:gap-3 md:gap-4 lg:gap-5 text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm sm:text-base md:text-lg lg:text-xl"
-                      >
-                        <span className="text-accent mt-0.5 sm:mt-1 text-base sm:text-lg md:text-xl lg:text-2xl flex-shrink-0">•</span>
-                        <span className="leading-relaxed">{responsibility}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
+                  {/* Technologies */}
+                  <div>
+                    <h3 className="text-xs sm:text-sm font-medium tracking-widest uppercase text-accent mb-4 sm:mb-6">Technologies</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.technologies.map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="outline"
+                          className="text-xs border-border/50 text-muted-foreground hover:border-accent/50 hover:text-accent transition-colors duration-300"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Responsibilities */}
+                  <div>
+                    <h3 className="text-xs sm:text-sm font-medium tracking-widest uppercase text-accent mb-4 sm:mb-6">Key Contributions</h3>
+                    <ul className="space-y-2 sm:space-y-3">
+                      {selectedProject.responsibilities.map((resp, index) => (
+                        <li key={index} className="flex items-start gap-3 group/item">
+                          <span className="text-accent mt-1 text-xs transition-transform duration-300 group-hover/item:translate-x-1">→</span>
+                          <span className="text-sm text-muted-foreground leading-relaxed">{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                {/* Close Button */}
-                <div className="pt-2 sm:pt-4 md:pt-6">
+                {/* Watch Full Video CTA */}
+                <div className="pt-4 sm:pt-8 border-t border-border/30">
                   <Button
-                    onClick={handleCloseModal}
+                    onClick={() => handleWatchOnYouTube(selectedProject.youtubeUrl)}
                     variant="outline"
-                    size="lg"
-                    className="hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 text-sm sm:text-base md:text-lg px-6 py-4 sm:px-8 sm:py-6"
+                    className="group border-border/50 hover:border-accent/50 hover:bg-accent/10 transition-all duration-300"
                   >
-                    <X className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                    Close Details
+                    <ExternalLink className="h-4 w-4 mr-2 group-hover:text-accent transition-colors" />
+                    <span className="group-hover:text-accent transition-colors">Watch Full Video on YouTube</span>
                   </Button>
                 </div>
               </div>
